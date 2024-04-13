@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function fetchAndDisplayQuestions() {
     const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
-  fetch(`/api/questions?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`)
+  fetch(`https://satsangtech.github.io/aptitude/server.js/api/questions?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`)
       .then(response => response.json())
       .then(data => {
         const questions = data.questions;
