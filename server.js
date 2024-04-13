@@ -20,7 +20,7 @@ let userSelectedAnswers = [];
 // Endpoint to get questions
 app.get('/api/questions', (req, res) => {
     // Read questions from JSON file
-    fs.readFile(path.join(__dirname, 'questions.json'), (err, data) => {
+    fs.readFile(path.join(__dirname, 'https://satsangtech.github.io/aptitude/questions.json'), (err, data) => {
         if (err) {
             console.error(err);
             res.status(500).send('Internal Server Error');
