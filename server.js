@@ -14,6 +14,13 @@ app.use(bodyParser.json());
 // Middleware to parse incoming request bodies
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Enable CORS for all routes
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*"); // Allow requests from any origin
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
 // Array to store user-selected answers
 let userSelectedAnswers = [];
 
